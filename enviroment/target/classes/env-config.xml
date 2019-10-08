@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans>
+    <Log class="com.jiangtao.util.impl.LogImpl"></Log>
+
+    <backUp class="com.jiangtao.util.impl.BackUpImpl">
+        <path>D:\ideaworkspace\BD1904\enviroment\src\main\java\com\jiangtao\util\backUp.bac</path>
+    </backUp>
+
+    <Gather class="com.jiangtao.client.impl.GatherImpl">
+        <logsFile>D:\ideaworkspace\BD1904\enviroment\src\main\java\com\jiangtao\data\templogs</logsFile>
+        <skipFile>D:\ideaworkspace\BD1904\enviroment\src\main\java\com\jiangtao\client\skipFile</skipFile>
+    </Gather>
+
+    <DBStore class="com.jiangtao.server.impl.DBStoreImpl">
+        <driver>com.mysql.jdbc.Driver</driver>
+        <url>jdbc:mysql://192.168.12.61:3306/briup</url>
+        <user>root</user>
+        <password>root</password>
+    </DBStore>
+
+    <Client class="com.jiangtao.client.impl.ClientImpl">
+        <host>127.0.0.1</host>
+        <port>10001</port>
+    </Client>
+
+    <Server class="com.jiangtao.server.impl.ServerImpl">
+        <port>10001</port>
+    </Server>
+
+</beans>
